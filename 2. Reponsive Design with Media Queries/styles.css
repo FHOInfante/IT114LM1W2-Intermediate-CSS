@@ -46,41 +46,42 @@ when the screen's width is smaller than 500px */
 For each break point, the background of .common-breakpoints must change
 */
 .common-breakpoints {
-  width: 100%;
-  height: 500px;
-  background-color: blue;
+  width: 300 100%;
+  height: 300px;
+  background-color: purple;
 }
 
-@media (width >= 320) and (height <= 480px) {
-  /*Mobile*/
-  .common-breakpoints {
-    background-color: purple;
-  }
-}
-
-@media (width >= 481px) and (height <= 768px) {
-  /*IPads or Tables*/
+@media (width >= 320px) and (width <= 480px) {
+  /* Mobile Device */
   .common-breakpoints {
     background-color: red;
   }
 }
 
-@media (width >= 769px) and (height <= 1024px) {
-  /*Small screens or Laptops*/
+@media (width >= 481px) and (width <= 768px) {
+  /* IPads or Tables */
   .common-breakpoints {
     background-color: orange;
   }
 }
 
-@media (width >= 1024px) and (height <= 1200px) {
-  /*Desktops or Large Screens*/
+@media (width >= 769px) and (width <= 1024px) {
+  /* Small screens or Laptops */
   .common-breakpoints {
     background-color: yellow;
   }
 }
 
+@media (width >= 1024px) and (width <= 1200px) {
+  /* Desktops or Large Screens */
+  .common-breakpoints {
+    background-color: green;
+  }
+}
+
 @media (width >= 1201px){
+  /* TV */
   .common-breakpoints{
-    background-color: pink;
+    background-color: blue;
   }
 }
