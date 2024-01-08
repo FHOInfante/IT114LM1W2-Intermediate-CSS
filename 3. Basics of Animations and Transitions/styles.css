@@ -11,25 +11,65 @@
     font-size: 24px;
 }
 
-/* Todo 3.0: Create an animation that increases and decreases the scale of the box  */
-.todo-0-container .box{
-    /* Apply animation here */
+/* Todo 3.0: Create an animation that increases and decreases the scale of the box */
+.todo-0-container .box {
+    animation-name: scaleAnimation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scaleAnimation {
+    from {scale: 1;}
+    to {scale: 1.5;}
 }
 
 /* Todo 3.1: Create an animation that moves the box left and right.
 Start with using "from" and "to". Now use "0%" and "100%" as your key frames.
 Set more key frames between 0% and 100%. */
-.todo-1-container .box{
-    /* Apply animation here */
+.todo-1-container .box {
+    position: relative; 
+    animation-name: leftToRight; 
+    animation-duration: 3s;
+    animation-direction: alternate-reverse;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
+
+@keyframes leftToRight {
+    0% {left: 0px}
+    50% {left: 100px}
+    100% {left: 0px}
+}
+
 
 /* Todo 3.2: Try the different timing funcitons such as linear, ease-in, ease-in-out, cubic-bezier, and steps*/
 .todo-2-container .box{
-    /* Apply animation here */
+    position: relative;
+    animation-name: timingFunction;
+    animation-duration: 1s; 
+    animation-direction: alternate;
+    animation-timing-function: step-end; 
+    animation-iteration-count: infinite;
+}
+
+@keyframes timingFunction{
+    0% {left: 0px}
+    25% {left: 50px}
+    50% {left: 100px}
+    75% {left: 150px}
+    100% {left: 200px}
 }
 
 /* Todo 3.3: Create a transition that will raise the button up and will make it cast a shadow when you hover over the button */
 /* bonus: apply the transition on the box shadow with different duration and timing function. This should all be in one line*/
 .todo-3-container button{
-    /* Apply transition here */
+    transition: transform 0.3s ease-in, box-shadow 0.5s ease-in-out;
 }
+
+.todo-3-container button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px rgb(29, 127, 62) ;
+}
+
